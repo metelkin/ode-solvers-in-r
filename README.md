@@ -45,3 +45,9 @@ A = 1;
 B = 0;
 C = 0;
 ```
+
+## Summary
+
+| Package | Engine | DAE | Algorithms | Stiffness | TimeEvent | CEvent | Delay | Format of the ODE system |
+|---------|-------|-----|------------|-----------|--------|-------|-------|-------------------------|
+| deSolve  | ODEPACK (Fortran) | Yes (limited) | lsoda, lsode, lsodes, lsodar, vode, daspk, radau, bdf, adams | Yes | Yes | Yes | Yes (limited) | R func / C / C++ / Fortran |

@@ -25,18 +25,26 @@ state <- c(
 )
 
 parameters <- c(
-  kabs_Alc = 0.1,
-  Vmax_ADH = 0.5,
+  kabs_Alc = 10.0,
+  Vmax_ADH = 3,
   Km_ADH = 0.1,
   V_blood = 5.5
 )
 
-times <- seq(0, 120, by = 0.01)
+events <- data.frame(
+  var = "Alc_g",
+  time = 2,
+  value = 50,
+  method = "add"
+)
 
-out <- ode(y = state, times = times, func = alc_model, parms = parameters)
+out <- ode(
+  times = seq(0, 12, by = 0.001), 
+  func = alc_model,
+  y = state, 
+  parms = parameters, 
+  events = list(data = events)
+  )
 
 plot(out)
 
-out_df <- as.data.frame(out)
-
-plot(out_df$time, out_df$Alc_b, type = "l")

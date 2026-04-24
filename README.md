@@ -48,6 +48,6 @@ C = 0;
 
 ## Summary
 
-| Package | Engine | DAE | Algorithms | Stiffness | TimeEvent | CEvent | Delay | Format of the ODE system |
+| Package | Engine | DAE | Algorithms | Stiffness | Time Event | Conditional Event | Delay | Format of the ODE system |
 |---------|-------|-----|------------|-----------|--------|-------|-------|-------------------------|
-| deSolve  | ODEPACK (Fortran) | Yes (limited) | lsoda, lsode, lsodes, lsodar, vode, daspk, radau, bdf, adams | Yes | Yes | Yes | Yes (limited) | R func / C / C++ / Fortran |
+| deSolve  | ODEPACK + DASPK (FORTRAN) | Yes (via DASPK) | lsoda, lsode, lsodes, lsodar, vode, daspk, radau |  Yes (via LSODA) | Yes | Yes (via rootfun) | Yes (via dede) | R func / C / C++ / Fortran |

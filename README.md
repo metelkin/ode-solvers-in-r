@@ -21,13 +21,13 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 ### Open source ecosystem
 
 + deSolve
-+ RxODE - Archived => rxode2
++ RxODE => Archived => rxode2
 + rxode2
 + mrgsolve
-+ odesolve - Archived => deSolve
-- dMod
-- pracma
-- odin
++ odesolve => Archived => deSolve
++ dMod => deSolve
++ pracma
++ odin
 - diffeqr / JuliaCall => Julia
 - nlmixr2 => rxode2
 - PKPDsim => RxODE / rxode2
@@ -47,6 +47,9 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 - pmxTools
 - PKADVAN
 - r2sundials 
+- rodeo 
+- cOde
+- bvpSolve
 
 ### enterprise ecosystem
 

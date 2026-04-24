@@ -47,3 +47,8 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# specific to this project
+*.c
+*.dll
+*.o

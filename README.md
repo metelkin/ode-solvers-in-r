@@ -25,8 +25,8 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 + rxode2
 + mrgsolve
 + odesolve - Archived => deSolve
-- pracma
 - dMod
+- pracma
 - odin
 - diffeqr / JuliaCall => Julia
 - nlmixr2 => rxode2

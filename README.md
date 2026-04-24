@@ -21,10 +21,10 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 ### Open source ecosystem
 
 + deSolve
-+ RxODE - Closed / Archived => rxode2
++ RxODE - Archived => rxode2
 + rxode2
-- mrgsolve
-- odesolve - old
++ mrgsolve
++ odesolve - Archived => deSolve
 - pracma
 - dMod
 - odin

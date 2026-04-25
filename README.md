@@ -3,15 +3,19 @@ Repository for testing ODE solvers in R
 
 ## Properties of the ODE solvers
 
-- Package
-- Engine
-- DAE
+- Package + ref to CRAN
+- Engine + solver type + ref to lib (if available)
 - Algorithms
-- Stiffness
+- Stiffness + algorithms
+- Model execution type (Interpreted / Compiled)
 - Time Events
 - Conditional Events
+- Format of the ODE system + notes
+- DAE
 - DDE
-- Format of the ODE system
+- Authors summary
+- Download counts (CRAN)
+- GitHub stars
 - License
 
 ## Packages
@@ -25,12 +29,10 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 + rxode2
 + mrgsolve
 + odesolve => Archived => deSolve
-+ dMod => deSolve
++ dMod => Depend on => deSolve
 + pracma
 + odin
-- diffeqr / JuliaCall => Julia
-- nlmixr2 => rxode2
-- PKPDsim => RxODE / rxode2
+- PKPDsim
 - SimInf
 - EpiModel => deSolve
 - PBSddesolve
@@ -41,15 +43,15 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 - sundialr
 - cvodes
 - odeintr
-- FME => deSolve
-- EpiModel => deSolve
+- FME => Depend on => deSolve
+- EpiModel => Depend on => deSolve
 - adaptivetau - stochastic
 - pmxTools
 - PKADVAN
 - r2sundials 
 - rodeo 
-- cOde
 - bvpSolve
+- diffeqr / JuliaCall => Julia
 
 ### enterprise ecosystem
 
@@ -57,6 +59,11 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 - RDarwin - Certara
 - IQRTools
 - mlxR - Monolix / Lixoft
+
+### removed
+
+- nlmixr2 => Depend on => rxode2
+- cOde => Code generation for deSolve, bvpSolve, dMod
 
 ## Classification
 

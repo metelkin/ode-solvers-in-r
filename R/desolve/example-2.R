@@ -1,6 +1,7 @@
 
 require(deSolve)
 
+# load model as R function
 rob_model <- function(t, state, parameters) {
   with(as.list(c(state, parameters)), {
     # ODEs
@@ -20,12 +21,13 @@ state <- c(
 
 parameters <- c()
 
+# solve
 out <- ode(
   times = seq(0, 1, by = 1e-2), 
   func = rob_model,
   y = state, 
   parms = parameters,
-  #method = "rk4"
+  #method = "rk4" # can select method
   )
 
 plot(out)

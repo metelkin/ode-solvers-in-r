@@ -1,6 +1,10 @@
+# https://cran.r-project.org/web/packages/mrgsolve/index.html
+# https://github.com/metrumresearchgroup/mrgsolve
+
 library(mrgsolve)
 library(magrittr)
 
+# load model as DLS (C++ like)
 code <- '
 $PARAM
 kabs_Alc = 10.0
@@ -25,12 +29,14 @@ capture Alc_b;
 
 mod <- mcode("alc_model", code)
 
+# time event
 ev1 <- ev(
   time = 2,
   amt = 50,
   cmt = "Alc_g"
 )
 
+# solve
 out <- mod %>%
   init(Alc_g = 50, Alc_b_amt = 0) %>%
   ev(ev1) %>%

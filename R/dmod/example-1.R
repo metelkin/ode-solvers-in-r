@@ -1,6 +1,10 @@
+# https://cran.r-project.org/web/packages/dMod/index.html
+# https://github.com/dkaschek/dMod
+
 library(dMod)
 library(magrittr)
 
+# load model with API
 reactions <- NULL %>%
   addReaction(
     from = "Alc_g",
@@ -27,6 +31,9 @@ pars <- c(
 
 times <- seq(0, 12, by = 0.001)
 
+# no time events
+
+# solve
 out <- x(times, pars)
 
 plot(out[[1]][, "time"], out[[1]][, "Alc_b_amt"], type = "l")

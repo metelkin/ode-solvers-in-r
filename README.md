@@ -32,7 +32,7 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 + dMod => Depend on => deSolve
 + pracma
 + odin
-- PKPDsim
++ PKPDsim
 - SimInf
 - EpiModel => deSolve
 - PBSddesolve

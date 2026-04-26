@@ -52,3 +52,4 @@ rsconnect/
 *.c
 *.dll
 *.o
+.positai

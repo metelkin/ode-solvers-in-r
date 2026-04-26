@@ -3,6 +3,7 @@
 
 require(deSolve)
 
+# load model as R function
 alc_model <- function(t, state, parameters) {
   with(as.list(c(state, parameters)), {
     
@@ -15,7 +16,7 @@ alc_model <- function(t, state, parameters) {
     dAlc_g <- -vabs_Alc
     dAlc_b_amt <- vabs_Alc - v_ADH
     
-    list(c(dAlc_g, dAlc_b_amt), Alc_b = Alc_b)
+    list(c(dAlc_g, dAlc_b_amt), Alc_b = Alc_b) # rule Alc_b to output
   })
 }
 
@@ -31,6 +32,7 @@ parameters <- c(
   V_blood = 5.5
 )
 
+# Time event
 events <- data.frame(
   var = "Alc_g",
   time = 2,
@@ -38,6 +40,7 @@ events <- data.frame(
   method = "add"
 )
 
+# solve
 out <- ode(
   times = seq(0, 12, by = 0.001), 
   func = alc_model,

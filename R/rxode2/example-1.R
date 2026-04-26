@@ -4,6 +4,7 @@
 library(rxode2)
 library(dplyr)
 
+# load model as DSL (R like)
 alc_model <- rxode2({
   # rules
   Alc_b <- Alc_b_amt / V_blood
@@ -27,10 +28,12 @@ state <- c(
   Alc_b_amt = 0
 )
 
+# Time event
 events <- et(timeUnits = "hours") %>%
   et(amt = 50, time = 2, cmt = "Alc_g") %>%
   et(seq(0, 12, by = 0.001))
 
+# solve
 out <- rxSolve(
   alc_model,
   params = parameters,

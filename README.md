@@ -1,85 +1,22 @@
 # ode-solvers-in-r
-Repository for testing ODE solvers in R
 
-## Properties of the ODE solvers
+This repository contains **minimal, reproducible examples** for solving ODE systems using different R packages.
 
-- Package + ref to CRAN
-- Engine + solver type + ref to lib (if available)
-- Algorithms
-- Stiffness + algorithms
-- Model execution type (Interpreted / Compiled)
-- Time Events
-- Conditional Events
-- Format of the ODE system + notes
-- DAE
-- DDE
-- Authors summary
-- Download counts (CRAN)
-- GitHub stars
-- License
+It accompanies the article:
 
-## Packages
+👉 **[Landscape of ODE Solvers in R (2025)](https://metelkin.me/landscape-of-ode-solvers-in-r/)**
 
-https://cran.r-project.org/web/views/DifferentialEquations.html
+## Structure
 
-### Open source ecosystem
+All implementations are located in the [`/R/`](./R) directory.
 
-+ deSolve
-+ RxODE => Archived => rxode2
-+ rxode2
-+ mrgsolve
-+ odesolve => Archived => deSolve
-+ dMod => Depend on => deSolve
-+ pracma
-+ odin
-+ PKPDsim
-- SimInf
-- EpiModel => deSolve
-- PBSddesolve
-- deTestSet
-- reticulate + SciPy => Python
-- rstan / Stan
-- phaseR
-- sundialr
-- cvodes
-- odeintr
-- FME => Depend on => deSolve
-- EpiModel => Depend on => deSolve
-- adaptivetau - stochastic
-- pmxTools
-- PKADVAN
-- r2sundials 
-- rodeo 
-- bvpSolve
-- diffeqr / JuliaCall => Julia
+Each subfolder corresponds to a specific package and contains code for running the same test models.
 
-### enterprise ecosystem
+## Test cases
 
-- RsNLME - Certara
-- RDarwin - Certara
-- IQRTools
-- mlxR - Monolix / Lixoft
+Two simple models are used to ensure consistency across packages:
 
-### removed
-
-- nlmixr2 => Depend on => rxode2
-- cOde => Code generation for deSolve, bvpSolve, dMod
-
-## Classification
-
-By the way of defining the ODE system:
-
-1. Function-based (ручное задание ODE)
-2. DSL-based (декларативное описание)
-3. Framework-based (модель как объект / проект)
-
-By the way of solving:
-
-1. Packages with bundled/native solvers
-2. Packages built on top of other R packages
-3. Interfaces to external ecosystems
-
-## Example 1: PK with MM elimination
+### Example 1: PK with MM elimination
 
 ```
 [ode]
@@ -101,7 +38,7 @@ V_blood = 5.5;
 Alc_g [time >= 2] = Alc_g + 50;
 ```
 
-## Example 2: Robertson problem stiff ODE
+### Example 2: Robertson problem stiff ODE
 
 ```[ode]
 A ~ -0.04 * A + 1e4 * B * C
@@ -112,3 +49,31 @@ A = 1;
 B = 0;
 C = 0;
 ```
+
+These examples are intentionally minimal and are designed to:
+
+- verify that each package works in practice  
+- provide a starting point for comparison  
+- illustrate differences in model definition and execution
+
+## Purpose
+
+This repository is not a benchmark.
+
+Its goal is to provide a **practical reference** showing how different ODE tools in R can be used on the same problems.
+
+## Notes
+
+- Implementations are kept simple and comparable
+- Package-specific features are not explored in depth  
+- Some tools rely on underlying solvers (e.g., `deSolve`) or external ecosystems  
+
+## Packages covered
+
+See the article for a full overview and comparison table.
+
+---
+
+## License
+
+MIT License. See [LICENSE](./LICENSE) for details.

@@ -1,7 +1,8 @@
 library(mrgsolve)
+library(magrittr)
 
 # load model as DLS (C++ like)
-code <- '
+mod <- mcode("rob_model", '
 $CMT
 A B C
 
@@ -9,9 +10,7 @@ $ODE
 dxdt_A = -0.04 * A + 1e4 * B * C;
 dxdt_B =  0.04 * A - 1e4 * B * C - 3e7 * pow(B, 2);
 dxdt_C =  3e7 * pow(B, 2);
-'
-
-mod <- mcode("rob_model", code)
+')
 
 # solve
 out <- mod %>%

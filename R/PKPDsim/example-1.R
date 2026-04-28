@@ -15,7 +15,7 @@ alc_model <- new_ode_model(
   ",
   declare_variables = c("Alc_b", "vabs_Alc", "v_ADH"),
   dose = list(cmt = 1),
-  obs = list(variable = "Alc_b")
+  obs = list(variable = c("Alc_b"))
 )
 
 parameters <- list(
@@ -43,5 +43,4 @@ out <- sim(
 )
 
 # plot
-plot(out$t, out$y, type = "l",
-     xlab = "Time", ylab = "Alc_b")
+plot(out$t, out$y, type = "l", xlab = "Time", ylab = "Alc_b")

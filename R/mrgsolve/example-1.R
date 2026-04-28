@@ -5,7 +5,7 @@ library(mrgsolve)
 library(magrittr)
 
 # load model as DLS (C++ like)
-code <- '
+mod <- mcode("pk_model", '
 $PARAM
 kabs_Alc = 10.0
 Vmax_ADH = 3
@@ -25,16 +25,10 @@ dxdt_Alc_b_amt = vabs_Alc - v_ADH;
 
 $TABLE
 capture Alc_b;
-'
-
-mod <- mcode("alc_model", code)
+')
 
 # time event
-ev1 <- ev(
-  time = 2,
-  amt = 50,
-  cmt = "Alc_g"
-)
+ev1 <- ev(time = 2, amt = 50, cmt = "Alc_g")
 
 # solve
 out <- mod %>%

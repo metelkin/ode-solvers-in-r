@@ -32,7 +32,7 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 + odin
 + PKPDsim
 + EpiModel => deSolve (Epidemiological models, same format as deSolve but restricted, Framework with different methods)
-- PBSddesolve
++ PBSddesolve (implemented algorithm for DDE solv95, R function format, connected to PBSModeling toolbox)
 - deTestSet
 - reticulate + SciPy => Python
 - rstan / Stan
@@ -62,3 +62,5 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 - SimInf => Out of scope => Stochastic
 - nlmixr2 => Depend on => rxode2
 - cOde => Code generation for deSolve, bvpSolve, dMod
+- ddesolve => Archived => PBSddesolve
+- PBSModeling => Depend on => PBSddesolve

@@ -31,8 +31,7 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 + pracma
 + odin
 + PKPDsim
-- SimInf
-- EpiModel => deSolve
++ EpiModel => deSolve (Epidemiological models, same format as deSolve but restricted, Framework with different methods)
 - PBSddesolve
 - deTestSet
 - reticulate + SciPy => Python
@@ -60,5 +59,6 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 
 ### removed
 
+- SimInf => Out of scope => Stochastic
 - nlmixr2 => Depend on => rxode2
 - cOde => Code generation for deSolve, bvpSolve, dMod

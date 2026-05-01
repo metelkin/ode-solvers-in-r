@@ -32,21 +32,12 @@ parameters <- c(
   V_blood = 5.5
 )
 
-# Time event
-events <- data.frame(
-  var = "Alc_g",
-  time = 2,
-  value = 50,
-  method = "add"
-)
-
 # solve
 out <- ode(
   times = seq(0, 12, by = 0.001), 
   func = alc_model,
   y = state, 
   parms = parameters, 
-  events = list(data = events)
   )
 
 plot(out)

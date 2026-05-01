@@ -33,22 +33,20 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 + PKPDsim
 + EpiModel => deSolve (Epidemiological models, same format as deSolve but restricted, Framework with different methods)
 + PBSddesolve (implemented algorithm for DDE solv95, R function format, connected to PBSModeling toolbox)
-- deTestSet
-- reticulate + SciPy => Python
++ sundialr (r interface to Sundials)
+- r2sundials 
 - rstan / Stan
 - phaseR
-- sundialr
 - cvodes
 - odeintr
 - FME => Depend on => deSolve
-- EpiModel => Depend on => deSolve
 - adaptivetau - stochastic
 - pmxTools
 - PKADVAN
-- r2sundials 
 - rodeo 
 - bvpSolve
 - diffeqr / JuliaCall => Julia
+- reticulate + SciPy => Python
 
 ### enterprise ecosystem
 
@@ -64,3 +62,4 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 - cOde => Code generation for deSolve, bvpSolve, dMod
 - ddesolve => Archived => PBSddesolve
 - PBSModeling => Depend on => PBSddesolve
+- deTestSet => Archived, non-solver package, but contains test sets for ODE solvers

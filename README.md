@@ -38,6 +38,8 @@ V_blood = 5.5;
 Alc_g [time >= 2] = Alc_g + 50;
 ```
 
+For the packages without build-in time events, the event is skipped.
+
 ### Example 2: Robertson problem stiff ODE
 
 ```[ode]

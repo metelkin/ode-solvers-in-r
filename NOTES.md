@@ -34,7 +34,7 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 + EpiModel => deSolve (Epidemiological models, same format as deSolve but restricted, Framework with different methods)
 + PBSddesolve (implemented algorithm for DDE solv95, R function format, connected to PBSModeling toolbox)
 + sundialr (r interface to Sundials)
-- r2sundials 
++ r2sundials 
 - rstan / Stan
 - phaseR
 - cvodes
@@ -55,6 +55,7 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 - IQRTools
 - mlxR - Monolix / Lixoft
 
+
 ### removed
 
 - SimInf => Out of scope => Stochastic
@@ -63,3 +64,4 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 - ddesolve => Archived => PBSddesolve
 - PBSModeling => Depend on => PBSddesolve
 - deTestSet => Archived, non-solver package, but contains test sets for ODE solvers
+- Rsundials => Archived

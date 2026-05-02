@@ -35,7 +35,7 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 + PBSddesolve (implemented algorithm for DDE solv95, R function format, connected to PBSModeling toolbox)
 + sundialr (r interface to Sundials)
 + r2sundials 
-- rstan / Stan
++ rstan => Depend on => Stan Math Library (C++)
 - phaseR
 - cvodes
 - odeintr

@@ -35,16 +35,16 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 + r2sundials (R interface to Sundials, looks unstable)
 + rstan => Depend on => Stan Math Library (C++) (Stan DSL and solvers)
 + rodeo (own Table format for ODE system, but uses deSolve as engine)
-- bvpSolve
++ IQRTools - open version (Own DSL for ODE system)
 - diffeqr / JuliaCall => Julia
 - reticulate + SciPy => Python
 
-### enterprise ecosystem
+### Enterprise ecosystem (proprietary)
 
-- RsNLME - Certara
-- RDarwin - Certara
-- IQRTools
-- mlxR - Monolix / Lixoft
+- RsNLME - Certara  - no info
+- RDarwin - Certara - no info
+- mlxR - Monolix / Lixoft => removed from CRAN mlxR 2026-01-14, deprecated https://monolixsuite.slp-software.com/r-functions/2024R1/package-mlxr
+- lixoftConnectors - Monolix / Lixoft => requires payment
 
 ### removed
 
@@ -64,4 +64,5 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 - pmxTools => excluded because it provides closed-form analytical PK
 calculations for predefined linear compartmental models, not a general ODE solver
 - PKADVAN => excluded, not in CRAN, just files on github, provides ADVAN-style analytical solutions
-- 
+- bvpSolve => excluded, only for boundary value problems, excluded from CRAN 2023-09-26
+- OSPSuite-R - OSP => Run models in closed form, not a general ODE solver

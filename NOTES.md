@@ -36,8 +36,8 @@ https://cran.r-project.org/web/views/DifferentialEquations.html
 + rstan => Depend on => Stan Math Library (C++) (Stan DSL and solvers)
 + rodeo (own Table format for ODE system, but uses deSolve as engine)
 + IQRTools - open version (Own DSL for ODE system)
-- diffeqr / JuliaCall => Julia
-- reticulate + SciPy => Python
++ diffeqr / JuliaCall => Julia
++ reticulate + SciPy => Python
 
 ### Enterprise ecosystem (proprietary)
 

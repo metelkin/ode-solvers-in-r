@@ -1,4 +1,5 @@
 # https://iqrtools.intiquan.com/
+# to install, download from here: https://iqrtools.intiquan.com/doc/book/license-and-availability.html
 
 library(IQRtools)
 
